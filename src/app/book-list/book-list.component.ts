@@ -1,5 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { Books } from '../books';
+import { Book } from '../book';
 
 @Component({
   selector: 'app-book-list',
@@ -8,7 +8,7 @@ import { Books } from '../books';
 })
 export class BookListComponent implements OnInit {
 
-  @Input() books: Books[];
+  @Input() books: Book[];
   @Input() name: string;
 
   newTitle: string;
@@ -17,7 +17,12 @@ export class BookListComponent implements OnInit {
 
   constructor() { }
 
-  ngOnInit() {
+  ngOnInit() {}
+
+
+  addBook() {
+    let book = new Book(this.newTitle, this.newAuthor, this.newGenre);
+    this.books.push(book);
   }
 
 }

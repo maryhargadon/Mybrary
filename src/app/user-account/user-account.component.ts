@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Book } from '../book';
 
 @Component({
   selector: 'app-user-account',
@@ -9,7 +10,11 @@ export class UserAccountComponent implements OnInit {
 
   constructor() { }
 
-  ngOnInit() {
-  }
+  ngOnInit() {}
+
+  myBooks = [
+    new Book("Frankenstien", "Mary Shelly", "Science Fiction"),
+    new Book("Swamp Thing", "Allan Moore", "Graphic Novel")
+  ];
 
 }

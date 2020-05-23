@@ -1,4 +1,4 @@
-export class Books {
+export class Book {
     title: string;
     author: string;
     genre: string;
