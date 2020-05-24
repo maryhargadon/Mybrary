@@ -4,13 +4,13 @@
 .nav-item{
     padding-left: 50px;
 }
-nav {
-    padding-top: 40px;
-}
+
 .navbar-brand {
-    text-size-adjust: 80px;
+    font-size: 40pt;
     color: brown;
 }
-a {
-    color: brown;
+
+#links a {
+    
+    font-size:15pt;
 }
