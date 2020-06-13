@@ -15,7 +15,7 @@ import { BookListComponent } from './book-list/book-list.component';
     BookListComponent
   ],
   imports: [
-    BrowserModule,
+    BrowserModule.withServerTransition({ appId: 'serverApp' }),
     AppRoutingModule,
     FormsModule
   ],
