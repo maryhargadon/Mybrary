@@ -7,12 +7,22 @@ import { UserAccountComponent } from './user-account/user-account.component';
 import { HomepageComponent } from './homepage/homepage.component';
 import { BookListComponent } from './book-list/book-list.component';
 
+import { LendingBooksComponent } from './lending-books/lending-books.component';
+import { ShowLendingBookComponent } from './show-lending-book/show-lending-book.component';
+import { AddLendingBookComponent } from './add-lending-book/add-lending-book.component';
+import { EditLendingBookComponent } from './edit-lending-book/edit-lending-book.component';
+
+
 @NgModule({
   declarations: [
     AppComponent,
     UserAccountComponent,
     HomepageComponent,
-    BookListComponent
+    BookListComponent,
+    LendingBooksComponent,
+    ShowLendingBookComponent,
+    AddLendingBookComponent,
+    EditLendingBookComponent
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'serverApp' }),
