@@ -27,8 +27,9 @@ import { LendingBookRoute } from './src/app/routes/lendingBook-route';
 const lendingBookRoute: LendingBookRoute = new LendingBookRoute();
 console.log(lendingBookRoute);
 
+const connectionString = 'mongodb+srv://maradon:Pamela1450!@cluster0-ww5ee.mongodb.net/mybrary?retryWrites=true&w=majority';
 
-mongoose.connect('mongodb://localhost/', { useNewUrlParser: true, useFindAndModify: false, useUnifiedTopology: true })
+mongoose.connect(connectionString, { useNewUrlParser: true, useFindAndModify: false, useUnifiedTopology: true })
   .then(() =>  console.log('connection successful'))
   .catch((err) => console.error(err));
 

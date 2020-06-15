@@ -22,13 +22,7 @@
             <span *ngIf="!bookForm.get('author').valid && bookForm.get('author').touched">Please enter Author</span>
           </mat-error>
         </mat-form-field>
-        <mat-form-field class="example-full-width">
-          <input matInput placeholder="Description" formControlName="description"
-                 [errorStateMatcher]="matcher">
-          <mat-error>
-            <span *ngIf="!bookForm.get('description').valid && bookForm.get('description').touched">Please enter Description</span>
-          </mat-error>
-        </mat-form-field>
+        
         <mat-form-field class="example-full-width">
           <input matInput placeholder="Genre" formControlName="genre"
                  [errorStateMatcher]="matcher">
