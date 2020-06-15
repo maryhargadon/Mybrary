@@ -43,7 +43,6 @@ getBook(id: any) {
     this.bookForm.setValue({
       title: data.title,
       author: data.author,
-      description: data.description,
       genre: data.genre
     });
   });
@@ -55,7 +54,7 @@ onFormSubmit() {
     .subscribe((res: any) => {
       const id = res._id;
       this.isLoadingResults = false;
-      this.router.navigate(['/show-book', id]);
+      this.router.navigate(['/show-lending-book', id]);
     }, (err: any) => {
       console.log(err);
       this.isLoadingResults = false;
@@ -64,6 +63,6 @@ onFormSubmit() {
 }
 
 bookDetails() {
-  this.router.navigate(['/show-book', this._id]);
+  this.router.navigate(['/show-lending-book', this._id]);
 }
 }

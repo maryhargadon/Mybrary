@@ -32,10 +32,10 @@ const routes: Routes = [
     component: EditLendingBookComponent,
     data: { title: 'Edit Book' }
   },
-  { path: '',
-    redirectTo: '/lending-books',
-    pathMatch: 'full'
-  }
+  // { path: '',
+  //   redirectTo: '/lending-books',
+  //   pathMatch: 'full'
+  // }
 
 ];
 

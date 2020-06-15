@@ -1,6 +1,6 @@
 .example-container {
     position: relative;
-    padding: 5px;
+    padding: 20px;
   }
   
   .example-table-container {
@@ -10,7 +10,7 @@
   }
   
   table {
-    width: 100%;
+    width: 50%;
   }
   
   .example-loading-shade {

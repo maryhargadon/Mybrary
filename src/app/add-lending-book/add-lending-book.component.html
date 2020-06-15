@@ -4,7 +4,7 @@
       <mat-spinner *ngIf="isLoadingResults"></mat-spinner>
     </div>
     <div class="button-row">
-      <a mat-flat-button color="primary" [routerLink]="['/books']"><mat-icon>list</mat-icon></a>
+      <a mat-flat-button color="primary" [routerLink]="['/lending-books']">Book List</a>
     </div>
     <mat-card class="example-card">
       <form [formGroup]="bookForm" (ngSubmit)="onFormSubmit()">
@@ -22,13 +22,7 @@
             <span *ngIf="!bookForm.get('author').valid && bookForm.get('author').touched">Please enter Author</span>
           </mat-error>
         </mat-form-field>
-        <mat-form-field class="example-full-width">
-          <input matInput placeholder="Description" formControlName="description"
-                 [errorStateMatcher]="matcher">
-          <mat-error>
-            <span *ngIf="!bookForm.get('description').valid && bookForm.get('description').touched">Please enter Description</span>
-          </mat-error>
-        </mat-form-field>
+        
         <mat-form-field class="example-full-width">
           <input matInput placeholder="Genre" formControlName="genre"
                  [errorStateMatcher]="matcher">
@@ -37,7 +31,7 @@
           </mat-error>
         </mat-form-field>
         <div class="button-row">
-          <button type="submit" [disabled]="!bookForm.valid" mat-flat-button color="primary"><mat-icon>save</mat-icon></button>
+          <button type="submit" [disabled]="!bookForm.valid" mat-flat-button color="primary">Save</button>
         </div>
       </form>
     </mat-card>

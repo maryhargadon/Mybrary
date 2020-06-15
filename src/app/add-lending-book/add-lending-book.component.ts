@@ -42,7 +42,7 @@ export class AddLendingBookComponent implements OnInit {
       .subscribe((res: any) => {
           const id = res._id;
           this.isLoadingResults = false;
-          this.router.navigate(['/show-book', id]);
+          this.router.navigate(['/show-lending-book', id]);
         }, (err: any) => {
           console.log(err);
           this.isLoadingResults = false;
