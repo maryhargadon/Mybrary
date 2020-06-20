@@ -17,11 +17,26 @@
 
 import 'zone.js/dist/zone-node';
 
+import * as mongoose from 'mongoose';
+import bodyParser from "body-parser";
+
 import * as express from 'express';
 import {join} from 'path';
+import { LendingBookRoute } from './src/app/routes/lendingBook-route';
 
+const lendingBookRoute: LendingBookRoute = new LendingBookRoute();
+console.log(lendingBookRoute);
+
+const connectionString = 'mongodb+srv://maradon:Pamela1450!@cluster0-ww5ee.mongodb.net/mybrary?retryWrites=true&w=majority';
+
+mongoose.connect(connectionString, { useNewUrlParser: true, useFindAndModify: false, useUnifiedTopology: true })
+  .then(() =>  console.log('connection successful'))
+  .catch((err) => console.error(err));
 // Express server
 const app = express();
+
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: true }));
 
 const PORT = process.env.PORT || 4000;
 const DIST_FOLDER = join(process.cwd(), 'dist/browser');
@@ -47,6 +62,7 @@ app.get('*.*', express.static(DIST_FOLDER, {
   maxAge: '1y'
 }));
 
+lendingBookRoute.lendingBookRoute(app);
 // All regular routes use the Universal engine
 app.get('*', (req, res) => {
   res.render('index', { req });
