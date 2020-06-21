@@ -23,9 +23,16 @@ import bodyParser from "body-parser";
 import * as express from 'express';
 import {join} from 'path';
 import { LendingBookRoute } from './src/app/routes/lendingBook-route';
+import { UserRoute } from './src/app/routes/user-route';
+import 'localstorage-polyfill'
+
+
 
 const lendingBookRoute: LendingBookRoute = new LendingBookRoute();
 console.log(lendingBookRoute);
+
+const userRoute: UserRoute = new UserRoute();
+console.log(userRoute);
 
 const connectionString = 'mongodb+srv://maradon:Pamela1450!@cluster0-ww5ee.mongodb.net/mybrary?retryWrites=true&w=majority';
 
@@ -41,6 +48,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 const PORT = process.env.PORT || 4000;
 const DIST_FOLDER = join(process.cwd(), 'dist/browser');
 
+global['localStorage'] = localStorage;
 // * NOTE :: leave this as require() since this file is built Dynamically from webpack
 const {AppServerModuleNgFactory, LAZY_MODULE_MAP, ngExpressEngine, provideModuleMap} = require('./dist/server/main');
 
@@ -63,6 +71,8 @@ app.get('*.*', express.static(DIST_FOLDER, {
 }));
 
 lendingBookRoute.lendingBookRoute(app);
+userRoute.userRoute(app);
+
 // All regular routes use the Universal engine
 app.get('*', (req, res) => {
   res.render('index', { req });
