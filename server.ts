@@ -23,9 +23,13 @@ import bodyParser from "body-parser";
 import * as express from 'express';
 import {join} from 'path';
 import { LendingBookRoute } from './src/app/routes/lendingBook-route';
+import { UserRoute } from './src/app/routes/user-route';
 
 const lendingBookRoute: LendingBookRoute = new LendingBookRoute();
 console.log(lendingBookRoute);
+
+const userRoute: UserRoute = new UserRoute();
+console.log(userRoute);
 
 const connectionString = 'mongodb+srv://maradon:Pamela1450!@cluster0-ww5ee.mongodb.net/mybrary?retryWrites=true&w=majority';
 
@@ -65,6 +69,7 @@ app.get('*.*', express.static(DIST_FOLDER, {
 }));
 
 lendingBookRoute.lendingBookRoute(app);
+userRoute.userRoute(app);
 
 // All regular routes use the Universal engine
 app.get('*', (req, res) => {
