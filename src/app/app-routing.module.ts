@@ -8,6 +8,10 @@ import { ShowLendingBookComponent } from './show-lending-book/show-lending-book.
 import { AddLendingBookComponent } from './add-lending-book/add-lending-book.component';
 import { EditLendingBookComponent } from './edit-lending-book/edit-lending-book.component';
 
+import { HomeComponent } from './home/home.component';
+import { LoginComponent } from './login/login.component';
+import { RegisterComponent } from './register/register.component';
+
 const routes: Routes = [
 
   { path: "homepage", component: HomepageComponent },
@@ -36,7 +40,11 @@ const routes: Routes = [
   //   redirectTo: '/lending-books',
   //   pathMatch: 'full'
   // }
-
+  { path: '', component: HomeComponent, data: { title: 'Home' } }, //canActivate: [AuthGuard] },
+  { path: 'login', component: LoginComponent, data: { title: 'Login'} },
+  { path: 'register', component: RegisterComponent, data: { title: 'Register'} },
+  // otherwise redirect to home
+  { path: '**', redirectTo: '' }
 ];
 
 @NgModule({

@@ -12,6 +12,11 @@ import { LendingBooksComponent } from './lending-books/lending-books.component';
 import { ShowLendingBookComponent } from './show-lending-book/show-lending-book.component';
 import { AddLendingBookComponent } from './add-lending-book/add-lending-book.component';
 import { EditLendingBookComponent } from './edit-lending-book/edit-lending-book.component';
+
+import { HomeComponent } from './home/home.component';
+import { LoginComponent } from './login/login.component';
+import { RegisterComponent } from './register/register.component';
+
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {
   MatInputModule,
@@ -34,7 +39,10 @@ import {
     LendingBooksComponent,
     ShowLendingBookComponent,
     AddLendingBookComponent,
-    EditLendingBookComponent
+    EditLendingBookComponent,
+    HomeComponent,
+    LoginComponent,
+    RegisterComponent
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'serverApp' }),

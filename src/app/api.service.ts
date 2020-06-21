@@ -3,6 +3,8 @@ import { Observable, of, throwError } from 'rxjs';
 import { HttpClient, HttpHeaders, HttpErrorResponse } from '@angular/common/http';
 import { catchError, tap, map } from 'rxjs/operators';
 import { LendingBook } from './lendingBook';
+import { User } from './user';
+import { environment } from 'src/environments/environment';
 
 const httpOptions = {
   headers: new HttpHeaders({'Content-Type': 'application/json'})
@@ -59,6 +61,18 @@ export class ApiService {
       tap(_ => console.log(`deleted Book id=${id}`)),
       catchError(this.handleError<LendingBook>('deleteBook'))
     );
+  }
+
+  getAll() {
+    return this.http.get<any[]>(`${environment.apiUrl}/users`);
+  }
+
+  register(user) {
+    return this.http.post(`${environment.apiUrl}/users/register`, user);
+  }
+
+  delete(id) {
+    return this.http.delete(`${environment.apiUrl}/users/${id}`);
   }
 
 }

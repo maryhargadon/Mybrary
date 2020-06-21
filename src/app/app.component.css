@@ -14,3 +14,8 @@
     
     font-size:15pt;
 }
+
+/* from bookCRUD: */
+.container {
+    padding: 20px;
+  }
