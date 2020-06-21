@@ -3,11 +3,10 @@ import { Router } from '@angular/router';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { first } from 'rxjs/operators';
 
-import { AuthenticationService } from '../_services/authentication.service';
+import { AuthenticationService, UserService } from '../_services';
 import { AlertService } from '../_services/alert.service';
 
-import { ApiService } from '../api.service';
-import { User } from '../user';
+
 
 @Component({
   selector: 'app-register',
@@ -23,7 +22,7 @@ export class RegisterComponent implements OnInit {
         private formBuilder: FormBuilder,
         private router: Router,
         private authenticationService: AuthenticationService,
-        private apiService: ApiService,
+        private userService: UserService,
         private alertService: AlertService
   ) {
     // redirect to home if already logged in
@@ -55,7 +54,7 @@ onSubmit() {
     }
 
     this.loading = true;
-    this.apiService.register(this.registerForm.value)
+    this.userService.register(this.registerForm.value)
         .pipe(first())
         .subscribe(
             data => {

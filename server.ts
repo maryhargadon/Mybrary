@@ -24,6 +24,9 @@ import * as express from 'express';
 import {join} from 'path';
 import { LendingBookRoute } from './src/app/routes/lendingBook-route';
 import { UserRoute } from './src/app/routes/user-route';
+import 'localstorage-polyfill'
+
+
 
 const lendingBookRoute: LendingBookRoute = new LendingBookRoute();
 console.log(lendingBookRoute);
@@ -47,6 +50,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 const PORT = process.env.PORT || 4000;
 const DIST_FOLDER = join(process.cwd(), 'dist/browser');
 
+global['localStorage'] = localStorage;
 // * NOTE :: leave this as require() since this file is built Dynamically from webpack
 const {AppServerModuleNgFactory, LAZY_MODULE_MAP, ngExpressEngine, provideModuleMap} = require('./dist/server/main');
 
