@@ -11,11 +11,14 @@ import { EditLendingBookComponent } from './edit-lending-book/edit-lending-book.
 import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
+import { AuthGuard } from './_helpers/auth.guard';
 
 const routes: Routes = [
 
   { path: "homepage", component: HomepageComponent },
   { path: "user account", component: UserAccountComponent },
+  { path: "login*", component: LoginComponent },
+
   {
     path: 'lending-books',
     component: LendingBooksComponent,
@@ -40,7 +43,8 @@ const routes: Routes = [
   //   redirectTo: '/lending-books',
   //   pathMatch: 'full'
   // }
-  { path: '', component: HomeComponent, data: { title: 'Home' } }, //canActivate: [AuthGuard] },
+
+  { path: '', component: HomeComponent, canActivate: [AuthGuard], data: { title: 'Home' } }, //canActivate: [AuthGuard] },
   { path: 'login', component: LoginComponent, data: { title: 'Login'} },
   { path: 'register', component: RegisterComponent, data: { title: 'Register'} },
   // otherwise redirect to home

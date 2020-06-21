@@ -3,6 +3,9 @@ import { Router, ActivatedRoute } from '@angular/router';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { first } from 'rxjs/operators';
 
+import { ApiService } from '../api.service';
+import { User } from '../user';
+
 import { AuthenticationService } from '../_services/authentication.service';
 import { AlertService } from '../_services/alert.service';
 
@@ -18,7 +21,8 @@ export class LoginComponent implements OnInit {
     returnUrl: string;
 
   constructor(
-    private formBuilder: FormBuilder,
+        private api: ApiService,
+        private formBuilder: FormBuilder,
         private route: ActivatedRoute,
         private router: Router,
         private authenticationService: AuthenticationService,
