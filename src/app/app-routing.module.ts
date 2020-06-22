@@ -44,9 +44,9 @@ const routes: Routes = [
   //   pathMatch: 'full'
   // }
 
-  { path: '', component: HomeComponent, canActivate: [AuthGuard], data: { title: 'Home' } }, //canActivate: [AuthGuard] },
-  { path: 'login', component: LoginComponent, data: { title: 'Login'} },
-  { path: 'register', component: RegisterComponent, data: { title: 'Register'} },
+  { path: '', component: HomeComponent, canActivate: [AuthGuard] }, 
+  { path: 'login', component: LoginComponent },
+  { path: 'register', component: RegisterComponent },
   // otherwise redirect to home
   { path: '**', redirectTo: '' }
 ];
