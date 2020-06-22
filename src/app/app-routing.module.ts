@@ -17,7 +17,7 @@ const routes: Routes = [
 
   { path: "homepage", component: HomepageComponent },
   { path: "user account", component: UserAccountComponent },
-  { path: "login*", component: LoginComponent },
+  { path: "login", component: LoginComponent },
 
   {
     path: 'lending-books',
