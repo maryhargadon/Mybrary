@@ -1,5 +1,5 @@
 .bg-dark{
-    background-color: green !important;
+    background-color: teal !important;
 }
 .nav-item{
     padding-left: 50px;
@@ -7,7 +7,7 @@
 
 .navbar-brand {
     font-size: 40pt;
-    color: brown;
+    padding-left: 20px;
 }
 
 #links a {
@@ -19,3 +19,4 @@
 .container {
     padding: 20px;
   }*/
+
