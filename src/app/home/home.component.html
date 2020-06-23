@@ -1,5 +1,9 @@
-<h1>Hi {{currentUser.username}}!</h1>
-<p>Welcome to your Mybrary account</p>
+<div class="card">
+<!-- <div class="d-flex flex-column"> 
+<div class="d-flex flex-row"> -->
+
+<h2>Welcome {{currentUser.username}}</h2>
+
 <p>All registered users:</p>
 <ul>
     <li *ngFor="let user of users">
@@ -7,6 +11,10 @@
         - <a (click)="deleteUser(user.id)" class="text-danger">Delete</a>
     </li>
 </ul>
+
+<!-- </div>
+</div> -->
+</div>
 
 <app-user-account></app-user-account>
 
