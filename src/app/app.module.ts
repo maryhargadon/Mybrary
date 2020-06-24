@@ -13,6 +13,11 @@ import { ShowLendingBookComponent } from './show-lending-book/show-lending-book.
 import { AddLendingBookComponent } from './add-lending-book/add-lending-book.component';
 import { EditLendingBookComponent } from './edit-lending-book/edit-lending-book.component';
 
+import { AlbumsComponent } from './albums/albums.component';
+import { ShowAlbumComponent } from './show-album/show-album.component';
+import { AddAlbumComponent } from './add-album/add-album.component';
+import { EditAlbumComponent } from './edit-album/edit-album.component';
+
 import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
@@ -45,6 +50,10 @@ import {
     ShowLendingBookComponent,
     AddLendingBookComponent,
     EditLendingBookComponent,
+    AlbumsComponent,
+    AddAlbumComponent,
+    ShowAlbumComponent,
+    EditAlbumComponent,
     HomeComponent,
     LoginComponent,
     RegisterComponent,
