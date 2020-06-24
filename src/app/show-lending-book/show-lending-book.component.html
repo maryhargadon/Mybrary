@@ -1,10 +1,10 @@
-<div class="example-container mat-elevation-z8">
+<div class="example-container">
     <div class="example-loading-shade"
          *ngIf="isLoadingResults">
       <mat-spinner *ngIf="isLoadingResults"></mat-spinner>
     </div>
     <div class="button-row">
-      <a mat-flat-button color="primary" [routerLink]="['/lending-books']">Book List</a>
+      <a mat-flat-button color="accent" [routerLink]="['/lending-books']">Book List</a>
     </div>
     <mat-card class="example-card">
       <mat-card-header>
@@ -17,7 +17,7 @@
       </mat-card-content>
       
       <mat-card-actions>
-        <a mat-flat-button color="primary" [routerLink]="['/edit-lending-book', lendingBook._id]">Edit</a>
+        <a mat-flat-button color="accent" [routerLink]="['/edit-lending-book', lendingBook._id]">Edit</a>
         <a mat-flat-button color="warn" (click)="deleteBook(lendingBook._id)">Delete</a>
       </mat-card-actions>
     </mat-card>

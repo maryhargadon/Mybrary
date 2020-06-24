@@ -1,13 +1,18 @@
 <h3>My Books:</h3>
-<div class="example-container mat-elevation-z8">
-    <div class="example-loading-shade"
+
+<div class="example-container">
+
+  <div class="example-loading-shade"
          *ngIf="isLoadingResults">
-      <mat-spinner *ngIf="isLoadingResults"></mat-spinner>
-    </div>
+      <mat-spinner *ngIf="isLoadingResults"></mat-spinner>  
+  </div>
+
     <div class="button-row">
-      <a mat-flat-button color="primary" [routerLink]="['/add-lending-book']">Add</a>
+      <a mat-flat-button color="accent" [routerLink]="['/add-lending-book']">Add</a>
     </div>
+
     <div class="mat-elevation-z8">
+
       <table mat-table [dataSource]="data" class="example-table"
              matSort matSortActive="title" matSortDisableClear matSortDirection="asc">
   
@@ -26,5 +31,7 @@
         <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
         <tr mat-row *matRowDef="let row; columns: displayedColumns;" [routerLink]="['/show-lending-book/', row._id]"></tr>
       </table>
+
     </div>
-  </div>
+
+</div>

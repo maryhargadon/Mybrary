@@ -1,10 +1,10 @@
-<div class="example-container mat-elevation-z8">
+<div class="example-container">
     <div class="example-loading-shade"
          *ngIf="isLoadingResults">
       <mat-spinner *ngIf="isLoadingResults"></mat-spinner>
     </div>
     <div class="button-row">
-      <a mat-flat-button color="primary" (click)="bookDetails()">Info</a>
+      <a mat-flat-button color="accent" (click)="bookDetails()">Info</a>
     </div>
     <mat-card class="example-card">
       <form [formGroup]="bookForm" (ngSubmit)="onFormSubmit()">
@@ -31,7 +31,7 @@
           </mat-error>
         </mat-form-field>
         <div class="button-row">
-          <button type="submit" [disabled]="!bookForm.valid" mat-flat-button color="primary">Save</button>
+          <button type="submit" [disabled]="!bookForm.valid" mat-flat-button color="accent">Save</button>
         </div>
       </form>
     </mat-card>

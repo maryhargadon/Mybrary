@@ -17,12 +17,17 @@
 </div>
 </div>
 
-<div *ngIf="!isShowBooksIf"><app-lending-books></app-lending-books></div>
+<hr>
+
+<div *ngIf="!isShowBooksIf"><app-lending-books></app-lending-books>
+                            <app-add-lending-book></app-add-lending-book>
+                            <app-show-lending-book></app-show-lending-book>
+                            <app-edit-lending-book></app-edit-lending-book>
+</div>
 
 <div *ngIf="!isShowMusicIf"><app-book-list [books]="myBooks" name="My Books"></app-book-list></div>
 
 <div *ngIf="!isShowNewIf"></div>
 
-<!-- <app-book-list [books]="myBooks" name="My Books"></app-book-list> -->
 
 

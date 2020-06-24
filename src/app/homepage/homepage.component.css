@@ -16,12 +16,11 @@ img {
 }
 
 .card {
-    background-color: teal;
+    background-color: seagreen;
 }
 
 .card-deck{
     padding: 20px;
-    
     /* width: 80%;   */
     flex-wrap: wrap;
     flex: initial; 

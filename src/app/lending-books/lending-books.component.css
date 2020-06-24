@@ -1,16 +1,17 @@
 .example-container {
-    position: relative;
-    padding: 20px;
+    /* position: relative; */
+    padding: 40px;
+    width: 50%;
   }
   
   .example-table-container {
-    position: relative;
+    /* position: relative; */
     max-height: 400px;
     overflow: auto;
   }
   
   table {
-    width: 50%;
+    width: 100%;
   }
   
   .example-loading-shade {
@@ -47,5 +48,5 @@
   }
 
   h3{
-    padding-left: 20px;
+    padding-left: 40px;
   }

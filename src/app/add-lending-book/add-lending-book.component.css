@@ -1,6 +1,7 @@
 .example-container {
     position: relative;
-    padding: 5px;
+    padding: 40px;
+    width: 50%;
   }
   
   .example-form {
