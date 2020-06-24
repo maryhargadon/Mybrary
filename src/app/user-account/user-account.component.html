@@ -6,15 +6,23 @@
 </div>
 
 <div class="d-flex flex-row">
-<div class="p-2"><button class="btn btn-primary btn-lg">Books</button></div> 
-<div class="p-2"><button class="btn btn-primary btn-lg">Music</button></div> 
-<div class="p-2"><button class="btn btn-primary btn-lg">New List</button></div>
+
+<div class="p-2"><button class="btn btn-primary btn-lg" (click)=toggleDisplayBooksIf()>Books</button></div> 
+
+<div class="p-2"><button class="btn btn-primary btn-lg" (click)=toggleDisplayMusicIf()>Music</button></div> 
+
+<div class="p-2"><button class="btn btn-primary btn-lg" (click)=toggleDisplayNewIf()>New List</button></div>
 </div>
 
 </div>
 </div>
+
+<div *ngIf="!isShowBooksIf"><app-lending-books></app-lending-books></div>
+
+<div *ngIf="!isShowMusicIf"><app-book-list [books]="myBooks" name="My Books"></app-book-list></div>
+
+<div *ngIf="!isShowNewIf"></div>
 
 <!-- <app-book-list [books]="myBooks" name="My Books"></app-book-list> -->
 
-<app-lending-books></app-lending-books>
 

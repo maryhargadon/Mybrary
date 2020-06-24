@@ -12,6 +12,24 @@ export class UserAccountComponent implements OnInit {
 
   ngOnInit() {}
 
+  isShowBooksIf = true;
+
+  toggleDisplayBooksIf() {
+    this.isShowBooksIf = !this.isShowBooksIf;
+  }
+
+  isShowMusicIf = true;
+
+  toggleDisplayMusicIf() {
+    this.isShowMusicIf = !this.isShowMusicIf;
+  }
+
+  isShowNewIf = true;
+
+  toggleDisplayNewIf() {
+    this.isShowNewIf = !this.isShowNewIf;
+  }
+
   myBooks = [
     new Book("Frankenstien", "Mary Shelly", "Science Fiction"),
     new Book("Swamp Thing", "Allan Moore", "Graphic Novel")
