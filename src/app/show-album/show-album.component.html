@@ -1,1 +1,24 @@
-<p>show-album works!</p>
+<div class="example-container">
+    <div class="example-loading-shade"
+         *ngIf="isLoadingResults">
+      <mat-spinner *ngIf="isLoadingResults"></mat-spinner>
+    </div>
+    <div class="button-row">
+      <a mat-flat-button color="accent" [routerLink]="['/albums']">Album List</a>
+    </div>
+    <mat-card class="example-card">
+      <mat-card-header>
+        <mat-card-title><h2>{{album.title}}</h2></mat-card-title>
+        <mat-card-subtitle>{{album.artist}} | {{album.updatedAt}}</mat-card-subtitle>
+      </mat-card-header>
+
+      <mat-card-content>
+        <h3>{{album.genre}}</h3>
+      </mat-card-content>
+      
+      <mat-card-actions>
+        <a mat-flat-button color="accent" [routerLink]="['/edit-album', album._id]">Edit</a>
+        <a mat-flat-button color="warn" (click)="deleteAlbum(album._id)">Delete</a>
+      </mat-card-actions>
+    </mat-card>
+  </div>
