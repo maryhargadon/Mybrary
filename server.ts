@@ -26,9 +26,7 @@ import { LendingBookRoute } from './src/app/routes/lendingBook-route';
 import { UserRoute } from './src/app/routes/user-route';
 import { AlbumRoute } from './src/app/routes/album-route';
 
-
 import 'localstorage-polyfill'
-
 
 
 const lendingBookRoute: LendingBookRoute = new LendingBookRoute();
@@ -40,13 +38,15 @@ console.log(userRoute);
 const albumRoute: AlbumRoute = new AlbumRoute();
 console.log(albumRoute);
 
+// Express server
+const app = express();
+
 const connectionString = 'mongodb+srv://maradon:Pamela1450!@cluster0-ww5ee.mongodb.net/mybrary?retryWrites=true&w=majority';
 
 mongoose.connect(connectionString, { useNewUrlParser: true, useFindAndModify: false, useUnifiedTopology: true })
   .then(() =>  console.log('connection successful'))
   .catch((err) => console.error(err));
-// Express server
-const app = express();
+
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
