@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ApiService } from '../api.service';
+import { AlbumApiService } from '../albumApi.service';
 import { Album } from '../album';
 
 @Component({
@@ -12,7 +12,7 @@ export class AlbumsComponent implements OnInit {
   data: Album[] = [];
   isLoadingResults = true;
 
-  constructor(private api: ApiService) { }
+  constructor(private api: AlbumApiService) { }
 
   ngOnInit() {
     this.api.getAlbums()

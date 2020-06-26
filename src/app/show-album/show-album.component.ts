@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
-import { ApiService } from '../api.service';
+import { AlbumApiService } from '../albumApi.service';
 import { Album } from '../album';
 
 @Component({
@@ -13,7 +13,7 @@ export class ShowAlbumComponent implements OnInit {
   album: Album = { _id: '', title: '', artist: '', genre: '', updatedAt: null };
   isLoadingResults = true;
 
-  constructor(private route: ActivatedRoute, private api: ApiService, private router: Router) { }
+  constructor(private route: ActivatedRoute, private api: AlbumApiService, private router: Router) { }
 
   ngOnInit() {
     this.getAlbumDetails(this.route.snapshot.params.id);

@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router, ActivatedRoute } from '@angular/router';
-import { ApiService } from '../api.service';
+import { AlbumApiService } from '../albumApi.service';
 import { FormControl, FormGroupDirective, FormBuilder, FormGroup, NgForm, Validators } from '@angular/forms';
 import { ErrorStateMatcher } from '@angular/material/core';
 
@@ -27,7 +27,7 @@ export class EditAlbumComponent implements OnInit {
   isLoadingResults = false;
   matcher = new MyErrorStateMatcher();
 
-  constructor(private router: Router, private route: ActivatedRoute, private api: ApiService, private formBuilder: FormBuilder) { }
+  constructor(private router: Router, private route: ActivatedRoute, private api: AlbumApiService, private formBuilder: FormBuilder) { }
 
   ngOnInit() {
     this.getArticle(this.route.snapshot.params.id);

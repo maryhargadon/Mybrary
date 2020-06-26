@@ -66,44 +66,5 @@ export class ApiService {
     );
   }
 
-//methods for music albums:
-
-  getAlbums(): Observable<Album[]> {
-    return this.http.get<Album[]>(apiUrl)
-      .pipe(
-        tap(albums => console.log('fetched Albums')),
-        catchError(this.handleError('getAlbums', []))
-      );
-  }
-  getAlbum(id: number): Observable<Album> {
-    const url = `${apiUrl}/${id}`;
-    return this.http.get<Album>(url).pipe(
-      tap(_ => console.log(`fetched Album id=${id}`)),
-      catchError(this.handleError<Album>(`getAlbum id=${id}`))
-    );
-  }
-
-  addAlbum(album: Album): Observable<Album> {
-    return this.http.post<Album>(apiUrl, album, httpOptions).pipe(
-      tap((al: Album) => console.log(`added Album w/ id=${al._id}`)),
-      catchError(this.handleError<Album>('addAlbum'))
-    );
-  }
-
-  updateAlbum(id: any, album: Album): Observable<any> {
-    const url = `${apiUrl}/${id}`;
-    return this.http.put(url, album, httpOptions).pipe(
-      tap(_ => console.log(`updated Album id=${id}`)),
-      catchError(this.handleError<any>('updateAlbum'))
-    );
-  }
-
-  deleteAlbum(id: any): Observable<Album> {
-    const url = `${apiUrl}/${id}`;
-    return this.http.delete<Album>(url, httpOptions).pipe(
-      tap(_ => console.log(`deleted Album id=${id}`)),
-      catchError(this.handleError<Album>('deleteAlbum'))
-    );
-  }
 
 }
