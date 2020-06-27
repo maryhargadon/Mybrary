@@ -33,8 +33,7 @@ export class AddAlbumComponent implements OnInit {
     this.albumForm = this.formBuilder.group({
       'title' : [null, Validators.required],
       'artist' : [null, Validators.required],
-      'description' : [null, Validators.required],
-      'content' : [null, Validators.required]
+      'genre' : [null, Validators.required]
     });
   }
 
