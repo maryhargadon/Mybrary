@@ -3,8 +3,9 @@ import { Router } from '@angular/router';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { first } from 'rxjs/operators';
 
-import { AuthenticationService, UserService } from '../_services';
-import { AlertService } from '../_services/alert.service';
+import { AuthenticationService, UserService, AlertService } from '../_services';
+
+import { UserApiService } from '../userApi.service';
 
 
 
@@ -22,8 +23,9 @@ export class RegisterComponent implements OnInit {
         private formBuilder: FormBuilder,
         private router: Router,
         private authenticationService: AuthenticationService,
-        private userService: UserService,
-        private alertService: AlertService
+        //private userService: UserService,
+        private alertService: AlertService,
+        private api: UserApiService
   ) {
     // redirect to home if already logged in
     if (this.authenticationService.currentUserValue) {
@@ -54,12 +56,12 @@ onSubmit() {
     }
 
     this.loading = true;
-    this.userService.register(this.registerForm.value)
+    this.api.addUser(this.registerForm.value)
         .pipe(first())
         .subscribe(
             data => {
                 this.alertService.success('Registration successful', true);
-                this.router.navigate(['/login'], { queryParams: { registered: true }});
+                this.router.navigate(['/login']);//, { queryParams: { registered: true }});
             },
             error => {
                 this.alertService.error(error);

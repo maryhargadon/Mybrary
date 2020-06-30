@@ -35,6 +35,7 @@
     "hammerjs": "^2.0.8",
     "localstorage-polyfill": "^1.0.1",
     "mongodb": "^3.5.9",
+    "mongodb-client-encryption": "^1.1.0",
     "mongoose": "^5.9.20",
     "rxjs": "~6.4.0",
     "tslib": "^1.10.0",
