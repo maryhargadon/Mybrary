@@ -4,16 +4,13 @@
       <mat-spinner *ngIf="isLoadingResults"></mat-spinner>
     </div>
     <div class="button-row">
-      <a mat-flat-button color="accent" [routerLink]="['/lending-books']">Book List</a>
+      <a mat-flat-button color="accent" [routerLink]="['/']">Back to Account</a>
     </div>
     <mat-card class="example-card">
-      <mat-card-header>
-        <mat-card-title><h2>{{lendingBook.title}}</h2></mat-card-title>
-        <mat-card-subtitle>{{lendingBook.author}} | {{lendingBook.updatedAt}}</mat-card-subtitle>
-      </mat-card-header>
-
       <mat-card-content>
-        <h3>{{lendingBook.genre}}</h3>
+        <h4>{{lendingBook.title}}</h4>
+        <h4>{{lendingBook.author}}</h4>
+        <h4>{{lendingBook.genre}}</h4>
       </mat-card-content>
       
       <mat-card-actions>
@@ -22,3 +19,5 @@
       </mat-card-actions>
     </mat-card>
   </div>
+
+  

@@ -4,7 +4,7 @@
       <mat-spinner *ngIf="isLoadingResults"></mat-spinner>
     </div>
     <div class="button-row">
-      <a mat-flat-button color="accent" [routerLink]="['/albums']">Album List</a>
+      <a mat-flat-button color="accent" [routerLink]="['/']">Back</a>
     </div>
     <mat-card class="example-card">
       <form [formGroup]="albumForm" (ngSubmit)="onFormSubmit()">
@@ -37,3 +37,4 @@
     </mat-card>
   </div>
 
+  

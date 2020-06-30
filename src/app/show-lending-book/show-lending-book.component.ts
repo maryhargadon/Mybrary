@@ -34,7 +34,7 @@ export class ShowLendingBookComponent implements OnInit {
     this.api.deleteBook(id)
       .subscribe(res => {
           this.isLoadingResults = false;
-          this.router.navigate(['/lending-books']);
+          this.router.navigate(['/']);
         }, (err) => {
           console.log(err);
           this.isLoadingResults = false;

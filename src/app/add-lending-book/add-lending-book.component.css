@@ -20,8 +20,14 @@
   
   .button-row {
     margin: 10px 0;
+    
   }
   
   .mat-flat-button {
     margin: 5px;
+    background-color: seagreen;
+  }
+
+  .d-inline-flex{
+    padding-left: 40px;
   }

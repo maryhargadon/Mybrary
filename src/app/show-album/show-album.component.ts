@@ -33,7 +33,7 @@ export class ShowAlbumComponent implements OnInit {
     this.api.deleteAlbum(id)
       .subscribe(res => {
           this.isLoadingResults = false;
-          this.router.navigate(['/albums']);
+          this.router.navigate(['/']);
         }, (err) => {
           console.log(err);
           this.isLoadingResults = false;
