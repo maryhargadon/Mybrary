@@ -2,7 +2,8 @@ import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 
 import { AuthenticationService } from './_services/authentication.service';
-
+ 
+import { User } from './_models/user';
 
 @Component({
   selector: 'app-root',
@@ -11,7 +12,7 @@ import { AuthenticationService } from './_services/authentication.service';
 })
 export class AppComponent {
   title = 'lending-library';
-  currentUser: any;
+  currentUser: User;
 
   constructor(
       private router: Router,

@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { first } from 'rxjs/operators';
-
+import { User } from '../_models/user';
 import { AuthenticationService, UserService } from '../_services';
 
 
@@ -10,7 +10,7 @@ import { AuthenticationService, UserService } from '../_services';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
-  currentUser: any;
+  currentUser: User;
   users = [];
 
   constructor(

@@ -23,7 +23,7 @@ import bodyParser from "body-parser";
 import * as express from 'express';
 import {join} from 'path';
 import { LendingBookRoute } from './src/app/routes/lendingBook-route';
-//import { UserRoute } from './src/app/routes/user-route';
+import { UserRoute } from './src/app/routes/user-route';
 import { AlbumRoute } from './src/app/routes/album-route';
 
 import 'localstorage-polyfill'
@@ -32,8 +32,8 @@ import 'localstorage-polyfill'
 const lendingBookRoute: LendingBookRoute = new LendingBookRoute();
 console.log(lendingBookRoute);
 
-//const userRoute: UserRoute = new UserRoute();
-// console.log(userRoute);
+const userRoute: UserRoute = new UserRoute();
+console.log(userRoute);
 
 const albumRoute: AlbumRoute = new AlbumRoute();
 console.log(albumRoute);
@@ -77,7 +77,7 @@ app.get('*.*', express.static(DIST_FOLDER, {
 }));
 
 lendingBookRoute.lendingBookRoute(app);
-//userRoute.userRoute(app);
+userRoute.userRoute(app);
 albumRoute.albumRoute(app);
 
 // All regular routes use the Universal engine
