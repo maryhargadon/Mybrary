@@ -30,5 +30,13 @@
   .d-inline-flex{
     padding-left: 40px;
   }
-
+  .page-container {
+    position: relative;
+    min-height: 100vh; 
+}  
+.content-wrap {
+    padding-bottom: 2.5rem; 
+    min-height: 700px;
+    background-color: khaki;   
+}  
   
