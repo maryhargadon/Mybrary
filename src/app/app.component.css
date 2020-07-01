@@ -20,5 +20,29 @@
     font-size:15pt;
 }
 
+body {
+    background: url("/../assets/img/milky-way.jpeg");
+    background-repeat: repeat;
+    background-size: cover;
+    height: 200%;
+}
+.page-container {
+    position: relative;
+    min-height: 100vh; 
+}  
+.content-wrap {
+    padding-bottom: 2.5rem; 
+    min-height: 700px;
+    /* background-color: lightblue;    */
+}  
+.page-footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 4.3rem;   
+    background-color: lightgreen;        
+} 
+
+
 
 

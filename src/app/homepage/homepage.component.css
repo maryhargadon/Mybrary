@@ -30,13 +30,7 @@ img {
     flex: initial; 
 }
 
-.page-footer {
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    height: 4.3rem;   
-    background-color: lightgreen;        
-}
+
 
 p{
     font-size: 160%;
@@ -45,10 +39,10 @@ button{
     border: 1px solid black;
     background-color: greenyellow;
 }
-body {
+ body {
     background: url("/../assets/img/milky-way.jpeg");
     background-repeat: repeat;
     background-size: cover;
     height: 200%;
 }
-  
+
