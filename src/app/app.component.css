@@ -6,8 +6,13 @@
 }
 
 .navbar-brand {
-    font-size: 40pt;
+    font-size: 45pt;
     padding-left: 20px;
+    padding-right: 20px;
+    font-family: "Brush Script MT";
+    background-color: lightgreen;
+    border: solid black;
+    margin-left: 20px;
 }
 
 #links a {
@@ -15,8 +20,5 @@
     font-size:15pt;
 }
 
-/* from bookCRUD: 
-.container {
-    padding: 20px;
-  }*/
+
 

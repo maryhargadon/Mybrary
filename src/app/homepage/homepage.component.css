@@ -1,10 +1,10 @@
 
 img {
-    width: 790px;
-    height: 545px;
+    width: 770px;
+    height: 550px;
     padding: 20px;
     
-} 
+}
 
 .row {
     display: flex;
@@ -17,6 +17,10 @@ img {
 
 .card {
     background-color: seagreen;
+    border: solid black;
+}
+.card-header {
+    background-color: lightgreen;
 }
 
 .card-deck{
@@ -26,21 +30,25 @@ img {
     flex: initial; 
 }
 
-.bg::after {
-    content: "";
-    background: url("/../assets/img/bgBooks.jpg");
-    opacity: 0.5;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
+.page-footer {
     position: absolute;
-    z-index: -1;   
+    bottom: 0;
+    width: 100%;
+    height: 4.3rem;   
+    background-color: lightgreen;        
 }
 
 p{
     font-size: 160%;
 }
-.button{
+button{
     border: 1px solid black;
+    background-color: greenyellow;
 }
+body {
+    background: url("/../assets/img/milky-way.jpeg");
+    background-repeat: repeat;
+    background-size: cover;
+    height: 200%;
+}
+  
