@@ -1,0 +1,9 @@
+.d-inline-flex{
+    padding-top: 20px;
+    padding-bottom: 40px;
+    padding-left: 40px;
+}
+button{
+    background-color: seagreen;
+    margin: 10px;
+}

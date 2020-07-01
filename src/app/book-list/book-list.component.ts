@@ -11,9 +11,9 @@ export class BookListComponent implements OnInit {
   @Input() books: Book[];
   @Input() name: string;
 
-  newTitle: string;
-  newAuthor: string;
-  newGenre: string;
+  newItem: string;
+  newDescription: string;
+  
 
   constructor() { }
 
@@ -21,8 +21,14 @@ export class BookListComponent implements OnInit {
 
 
   addBook() {
-    let book = new Book(this.newTitle, this.newAuthor, this.newGenre);
+    let book = new Book(this.newItem, this.newDescription);
     this.books.push(book);
   }
+
+  myBooks = [
+    new Book("Frankenstien", "Mary Shelly"),
+    new Book("Swamp Thing", "Allan Moore")
+  ];
+
 
 }

@@ -1,11 +1,22 @@
-<h3>My Book List</h3>
+<div class="d-inline-flex">
+<div class="d-flex flex-column"> 
+
+<div class="d-flex flex-row">
+<h3>My New List</h3>
+</div>
 
 <ul>
     <li *ngFor="let book of books">
-        {{ book.title }}, {{ book.author }}
+        {{ book.item }}, {{ book.description }}
     </li>
 </ul>
-<label>Title <input [(ngModel)]="newTitle" type="text"></label>
-<label>Author <input [(ngModel)]="newAuthor" type="text"></label>
-<label>Genre <input [(ngModel)]="newGenre" type="text"></label>
-<button class="btn-primary" (click)="addBook()">Add</button>
+
+<div class="d-flex flex-row">
+<label>Item <input [(ngModel)]="newItem" type="text"></label>
+<label>Description <input [(ngModel)]="newDescription" type="text"></label>
+
+<button class="btn btn-primary btn-xs" (click)="addBook()">Add</button>
+</div>
+
+</div>
+</div>

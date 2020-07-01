@@ -1,12 +1,12 @@
 export class Book {
-    title: string;
-    author: string;
-    genre: string;
+    item: string;
+    description: string;
+    
 
-    constructor(title: string, author: string, genre: string){
-        this.title = title;
-        this.author = author;
-        this.genre = genre;
+    constructor(item: string, description: string){
+        this.item = item;
+        this.description = description;
+        
     }
 
     

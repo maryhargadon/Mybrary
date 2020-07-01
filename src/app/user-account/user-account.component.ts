@@ -31,8 +31,8 @@ export class UserAccountComponent implements OnInit {
   }
 
   myBooks = [
-    new Book("Frankenstien", "Mary Shelly", "Science Fiction"),
-    new Book("Swamp Thing", "Allan Moore", "Graphic Novel")
+    new Book("Doris", "Zines"),
+    new Book("Riot Grrl", "Zines")
   ];
 
 }
