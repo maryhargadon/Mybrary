@@ -32,7 +32,11 @@ export class UserAccountComponent implements OnInit {
 
   myBooks = [
     new Book("Doris", "Zines"),
-    new Book("Riot Grrl", "Zines")
+    new Book("Riot Grrl", "Zines"),
+    new Book("Blender", "Appliance"),
+    new Book("Stack of National Geographics", "Crafts"),
+    new Book("Rusty bike", "Transportation"),
+    new Book("Pea Coat", "Fancy clothes")
   ];
 
 }
