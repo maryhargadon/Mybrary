@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { first } from 'rxjs/operators';
 
 import { AuthenticationService, UserService } from '../_services';
-
+import { User } from '../_models/user';
 
 @Component({
   selector: 'app-home',
