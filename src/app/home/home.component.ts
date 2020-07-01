@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { first } from 'rxjs/operators';
 import { User } from '../_models/user';
-import { AuthenticationService } from '../_services';
-import { UserApiService } from '../userApi.service';
+import { AuthenticationService, UserService } from '../_services';
+//import { UserApiService } from '../userApi.service';
 
 @Component({
   selector: 'app-home',
@@ -15,8 +15,8 @@ export class HomeComponent implements OnInit {
 
   constructor(
     private authenticationService: AuthenticationService,
-    //private userService: UserService
-    private api: UserApiService
+    private userService: UserService
+    //private api: UserApiService
   ) { this.currentUser = this.authenticationService.currentUserValue; }
 
   ngOnInit() {
@@ -24,13 +24,13 @@ export class HomeComponent implements OnInit {
   }
  
   deleteUser(id: number) {
-    this.api.deleteUser(id)
+    this.userService.delete(id)
         .pipe(first())
         .subscribe(() => this.loadAllUsers());
   }
 
   private loadAllUsers() {
-    this.api.getUsers()
+    this.userService.getAll()
         .pipe(first())
         .subscribe(users => this.users = users);
   }

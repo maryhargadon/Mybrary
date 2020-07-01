@@ -5,7 +5,7 @@ import { first } from 'rxjs/operators';
 
 import { AuthenticationService, UserService, AlertService } from '../_services';
 
-import { UserApiService } from '../userApi.service';
+//import { UserApiService } from '../userApi.service';
 
 
 
@@ -23,9 +23,9 @@ export class RegisterComponent implements OnInit {
         private formBuilder: FormBuilder,
         private router: Router,
         private authenticationService: AuthenticationService,
-        //private userService: UserService,
+        private userService: UserService,
         private alertService: AlertService,
-        private api: UserApiService
+        //private api: UserApiService
   ) {
     // redirect to home if already logged in
     if (this.authenticationService.currentUserValue) {
@@ -56,7 +56,7 @@ onSubmit() {
     }
 
     this.loading = true;
-    this.api.addUser(this.registerForm.value)
+    this.userService.register(this.registerForm.value)
         .pipe(first())
         .subscribe(
             data => {
