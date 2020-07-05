@@ -13,7 +13,7 @@
     "importHelpers": true,
     "target": "es2015",
     "allowSyntheticDefaultImports": true,
-    "typeRoots": [
+    "typeRoots": ["config",
       "node_modules/@types"
     ],
     "lib": [
@@ -21,11 +21,15 @@
       "dom"
     ],
     "paths": {
-      "@environments/*": ["src/environments/*"]
+      "@/*": [
+        "app/*"
+    ]
     }
   },
   "angularCompilerOptions": {
     "fullTemplateTypeCheck": true,
     "strictInjectionParameters": true
-  }
+  },
+  "exclude": ["node_modules", "**/*.spec.ts", "extra_src"],
+"include": ["./src/**/*", "./config/**/*"]
 }

@@ -46,6 +46,12 @@ module.exports = {
       /(.+)?express(\\|\/)(.+)?/,
       path.join(__dirname, 'src'),
       {}
-    )
+    ),
+    new webpack.DefinePlugin({
+      // global app config object
+      config: JSON.stringify({
+          apiUrl: 'http://localhost:4000'
+      })
+  })
   ]
 };
