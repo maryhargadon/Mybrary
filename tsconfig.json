@@ -31,5 +31,5 @@
     "strictInjectionParameters": true
   },
   "exclude": ["node_modules"],
-"include": ["./src/**/*", "./config/**/*"]
+"include": ["./src/**/*", "./config/**/*", "_helpers/jwt.js", "_helpers/error-handler.js", "_helpers/db.js", "users"]
 }
