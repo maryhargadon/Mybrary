@@ -21,7 +21,7 @@ import { EditAlbumComponent } from './edit-album/edit-album.component';
 import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
-import { JwtInterceptor,  } from './_helpers/jwt.interceptor';
+import { JwtInterceptor } from './_helpers/jwt.interceptor';
 import { ErrorInterceptor } from './_helpers/error.interceptor';
 import { AlertComponent } from './_components/alert.component'
 // used to create fake backend
