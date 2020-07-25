@@ -8,14 +8,14 @@ This is currently a project in progress for my front-end development course thro
 
 ## Technologies
 
-Angular version 8.2.14
-Bootstrap version 4.5.0
-Angular Material version 8.2.3
-Angular Universal version 8.2.6
-Express version 4.15.2
-Mongoose version 5.9.19
-Node.js version 12.13.0
-MongoDB Atlas
+* Angular version 8.2.14
+* Bootstrap version 4.5.0
+* Angular Material version 8.2.3
+* Angular Universal version 8.2.6
+* Express version 4.15.2
+* Mongoose version 5.9.19
+* Node.js version 12.13.0
+* MongoDB Atlas
 
 ### Demo Images
 
