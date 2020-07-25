@@ -41,7 +41,7 @@ console.log(albumRoute);
 // Express server
 const app = express();
 
-const connectionString = 'mongodb+srv://maradon:Pamela1450!@cluster0-ww5ee.mongodb.net/mybrary?retryWrites=true&w=majority';
+const connectionString = '<mongoDB connection string>';
 
 mongoose.connect(connectionString, { useNewUrlParser: true, useFindAndModify: false, useUnifiedTopology: true })
   .then(() =>  console.log('connection successful'))
