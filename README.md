@@ -21,14 +21,14 @@ This is currently a project in progress for my front-end web development course 
 
 Click the link below to view screenshots of the application.
 
-*Demo: ![Mybrary Demo](mybrary_demo.pdf)
+* Demo: ![Mybrary Demo](mybrary_demo.pdf)
 
 ## Setup
 
 To run this project:
 
 * clone or download
->cd../Mybrary
+>cd ../Mybrary
 * Install angular cli with npm 
 >npm install -g @angular/cli
 * Install required npm packages 
