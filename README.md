@@ -4,7 +4,7 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 ## Project Outline
 
-This is currently a project in progress for my front-end development course through Launchcode. This app is meant to provide a means for users to list and lend their own books, music albums, or other items to other users. Users will be able to create a personal account, list and display personal items they're willing to lend out, browse other users' collections, and arrange means of lending items to eachother through the app.  
+This is currently a project in progress for my front-end development course through Launchcode. This MEAN stack app is meant to provide a means for users to list and lend their own books, music albums, or other items to other users. 
 
 ## Technologies
 
@@ -23,7 +23,19 @@ Click the link below to view screenshots of the application.
 
 *Demo: ![Mybrary Demo](mybrary_demo.pdf)
 
->blockquotes
+## Setup
+
+To run this project:
+
+* clone or download
+* >cd../Mybrary
+* Install angular cli with npm >npm install -g @angular/cli
+* Install node modules >npm install
+* Insert MongoDB Atlas string in server.ts, or install and run mongodb locally
+* Run with >npm run build:ssr && npm run serve:ssr
+* Navigate to >http://localhost:4000/
+
+
 
 
 
