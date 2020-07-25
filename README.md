@@ -29,11 +29,13 @@ To run this project:
 
 * clone or download
 * >cd../Mybrary
-* Install angular cli with npm >npm install -g @angular/cli
-* Install node modules >npm install
+* Install angular cli with npm 
+* >npm install -g @angular/cli
+* Install node modules 
+* >npm install
 * Insert MongoDB Atlas string in server.ts, or install and run mongodb locally
 * Run with >npm run build:ssr && npm run serve:ssr
-* Navigate to >http://localhost:4000/
+* Navigate to http://localhost:4000/
 
 
 
