@@ -15,25 +15,25 @@ This is currently a project in progress for my front-end web development course 
 * Node.js version 12.13.0
 * MongoDB Atlas
 
-### Demo Images
+## Demo Images
 
 Click the link below to view screenshots of the application.
 
-* Demo: ![Mybrary Demo](mybrary_demo.pdf)
+* ![Mybrary Demo](mybrary_demo.pdf)
 
 ## Setup
 
 To run this project:
 
 * clone or download
->cd ../Mybrary
+`cd ../Mybrary`
 * Install angular cli with npm 
->npm install -g @angular/cli
+`npm install -g @angular/cli`
 * Install required npm packages 
->npm install
+`npm install`
 * Insert MongoDB Atlas connection string in server.ts, or install and run mongodb locally
 * Run with:
->npm run build:ssr && npm run serve:ssr
+`npm run build:ssr && npm run serve:ssr`
 * Navigate to http://localhost:4000/
 
 
