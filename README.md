@@ -2,7 +2,7 @@
 
 ## General Info
 
-This is currently a project in progress for my front-end web development course through Launchcode. This MEAN stack app is meant to provide a means for users to list and lend their own books, music albums, or other items to other users. Currently a user can register and login to a demo account that has a list of books and music albums that are stored using MongoDB. In the future I plan to have each user's account data stored separately using an index. I also plan to create a page where users can view each other's lists of lending items as well as a messaging system to establish lending logistics and terms. 
+This is currently a project in progress for my front-end web development course through Launchcode. Its a MEAN stack app using Angular 8 and MongoDB Atlas. The goal is to provide a means for users to list and lend their own books, music albums, or other items to other users. Currently a user can register and login to a demo account that has a list of books and music albums that are stored using MongoDB. In the future I plan to have each user's account data stored separately using an index. I also plan to create a page where users can view each other's lists of lending items as well as a messaging system to establish lending logistics and terms. 
 
 ## Technologies
 
