@@ -28,12 +28,16 @@
     "@angular/router": "~8.2.14",
     "@nguniversal/express-engine": "v8.2.6",
     "@nguniversal/module-map-ngfactory-loader": "v8.2.6",
+    "bcryptjs": "^2.4.3",
     "body-parser": "^1.19.0",
     "bootstrap": "^4.5.0",
+    "cors": "^2.8.5",
     "express": "^4.15.2",
+    "express-jwt": "^6.0.0",
     "hammerjs": "^2.0.8",
-    "mongoose": "^5.9.19",
     "localstorage-polyfill": "^1.0.1",
+    "mongoose": "^5.9.19",
+    "rootpath": "^0.1.2",
     "rxjs": "~6.4.0",
     "tslib": "^1.10.0",
     "zone.js": "~0.9.1"
@@ -44,9 +48,9 @@
     "@angular/compiler-cli": "~8.2.14",
     "@angular/language-service": "~8.2.14",
     "@types/express": "^4.17.0",
-    "@types/node": "~8.9.4",
     "@types/jasmine": "~3.3.8",
     "@types/jasminewd2": "~2.0.3",
+    "@types/node": "~8.9.4",
     "codelyzer": "^5.0.0",
     "jasmine-core": "~3.4.0",
     "jasmine-spec-reporter": "~4.2.1",
@@ -55,11 +59,24 @@
     "karma-coverage-istanbul-reporter": "~2.0.1",
     "karma-jasmine": "~2.0.1",
     "karma-jasmine-html-reporter": "^1.4.0",
+    "nodemon": "^2.0.4",
     "protractor": "~5.4.0",
     "ts-loader": "^5.2.0",
     "ts-node": "~7.0.0",
     "tslint": "~5.15.0",
     "typescript": "~3.5.3",
     "webpack-cli": "^3.1.0"
-  }
+  },
+  "description": "This is currently a project in progress for my front-end web development course through Launchcode. Its a MEAN stack app using Angular 8 and MongoDB Atlas. The goal is to provide a means for users to list and lend their own books, music albums, or other items to other users. Currently a user can register and login to a demo account that has a list of books and music albums that are stored using MongoDB. In the future I plan to have each user's account data stored separately using an index. I also plan to create a page where users can view each other's lists of lending items as well as a messaging system to establish lending logistics and terms.",
+  "main": "server.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/maryhargadon/Lending-Library.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/maryhargadon/Lending-Library/issues"
+  },
+  "homepage": "https://github.com/maryhargadon/Lending-Library#readme"
 }
