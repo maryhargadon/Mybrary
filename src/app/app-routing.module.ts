@@ -14,9 +14,11 @@ import { AddAlbumComponent } from './add-album/add-album.component';
 import { EditAlbumComponent } from './edit-album/edit-album.component';
 
 import { HomeComponent } from './home/home.component';
+import { AdminComponent } from './admin/admin.component';
 import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
 import { AuthGuard } from './_helpers/auth.guard';
+import { Role } from './_models/role';
 
 const routes: Routes = [
 
@@ -37,6 +39,7 @@ const routes: Routes = [
   // { path: '', redirectTo: '/albums', pathMatch: 'full' },
 
   { path: '', component: HomeComponent, canActivate: [AuthGuard] }, 
+  { path: 'admin', component: AdminComponent, canActivate: [AuthGuard], data: { roles: [Role.Admin] } },
   { path: 'login', component: LoginComponent },
   { path: 'register', component: RegisterComponent },
   // otherwise redirect to home
