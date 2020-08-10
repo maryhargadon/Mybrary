@@ -9,9 +9,10 @@ import { User } from '../_models/user';
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.css']
 })
-export class HomeComponent implements OnInit {
-  currentUser: any;
-  users = [];
+export class HomeComponent {
+  loading = false;
+  currentUser: User;
+  userFromApi: User;
 
   constructor(
     private authenticationService: AuthenticationService,
@@ -19,18 +20,10 @@ export class HomeComponent implements OnInit {
   ) { this.currentUser = this.authenticationService.currentUserValue; }
 
   ngOnInit() {
-    this.loadAllUsers();
-  }
- 
-  deleteUser(id: number) {
-    this.userService.delete(id)
-        .pipe(first())
-        .subscribe(() => this.loadAllUsers());
-  }
-
-  private loadAllUsers() {
-    this.userService.getAll()
-        .pipe(first())
-        .subscribe(users => this.users = users);
-  }
+    this.loading = true;
+        this.userService.getById(this.currentUser.id).pipe(first()).subscribe(user => {
+            this.loading = false;
+            this.userFromApi = user;
+        });
+    }
 }

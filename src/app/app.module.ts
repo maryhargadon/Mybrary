@@ -40,6 +40,7 @@ import {
   MatButtonModule,
   MatCardModule,
   MatFormFieldModule } from "@angular/material";
+import { AdminComponent } from './admin/admin.component';
 
 
 @NgModule({
@@ -59,7 +60,8 @@ import {
     HomeComponent,
     LoginComponent,
     RegisterComponent,
-    AlertComponent
+    AlertComponent,
+    AdminComponent
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'serverApp' }),
