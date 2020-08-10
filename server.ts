@@ -32,8 +32,8 @@ import 'localstorage-polyfill'
 const lendingBookRoute: LendingBookRoute = new LendingBookRoute();
 console.log(lendingBookRoute);
 
-const userRoute: UserRoute = new UserRoute();
-console.log(userRoute);
+//const userRoute: UserRoute = new UserRoute();
+//console.log(userRoute);
 
 const albumRoute: AlbumRoute = new AlbumRoute();
 console.log(albumRoute);
@@ -41,7 +41,7 @@ console.log(albumRoute);
 // Express server
 const app = express();
 
-const connectionString = '<mongoDB connection string>';
+const connectionString = '';
 
 mongoose.connect(connectionString, { useNewUrlParser: true, useFindAndModify: false, useUnifiedTopology: true })
   .then(() =>  console.log('connection successful'))
@@ -77,7 +77,7 @@ app.get('*.*', express.static(DIST_FOLDER, {
 }));
 
 lendingBookRoute.lendingBookRoute(app);
-userRoute.userRoute(app);
+//userRoute.userRoute(app);
 albumRoute.albumRoute(app);
 
 // All regular routes use the Universal engine
