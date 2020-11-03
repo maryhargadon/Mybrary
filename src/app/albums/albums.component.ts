@@ -11,6 +11,7 @@ export class AlbumsComponent implements OnInit {
   displayedColumns: string[] = ['title', 'artist'];
   data: Album[] = [];
   isLoadingResults = true;
+  
 
   constructor(private api: AlbumApiService) { }
 
@@ -24,6 +25,7 @@ export class AlbumsComponent implements OnInit {
       console.log(err);
       this.isLoadingResults = false;
     });
+
   }
 
 }
