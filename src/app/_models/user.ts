@@ -8,4 +8,5 @@ export class User {
     lastName: string;
     role: Role;
     token?: string;
+    albums: { title: string, author: string, genre: string };
 }
