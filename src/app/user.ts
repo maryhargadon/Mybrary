@@ -6,6 +6,7 @@ export class User {
     lastName: string;
     token: string;
     updatedAt: Date;
+    albums: [{ title: string, author: string, genre: string }];
   }
 
   

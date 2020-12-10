@@ -8,7 +8,8 @@ const schema = new Schema({
     firstName: { type: String, required: true },
     lastName: { type: String, required: true },
     role: { type: Role, required: true },
-    createdDate: { type: Date, default: Date.now }
+    createdDate: { type: Date, default: Date.now },
+    //albums: [{ title: string, author: string, genre: string }]
 });
 
 schema.set('toJSON', {
