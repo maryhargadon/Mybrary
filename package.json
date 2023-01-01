@@ -43,7 +43,7 @@
     "zone.js": "~0.9.1"
   },
   "devDependencies": {
-    "@angular-devkit/build-angular": "^0.803.27",
+    "@angular-devkit/build-angular": "^15.0.4",
     "@angular/cli": "^8.3.27",
     "@angular/compiler-cli": "~8.2.14",
     "@angular/language-service": "~8.2.14",
@@ -61,11 +61,11 @@
     "karma-jasmine-html-reporter": "^1.4.0",
     "nodemon": "^2.0.4",
     "protractor": "~5.4.0",
-    "ts-loader": "^5.2.0",
+    "ts-loader": "^9.4.2",
     "ts-node": "~7.0.0",
     "tslint": "~5.15.0",
     "typescript": "~3.5.3",
-    "webpack-cli": "^3.1.0"
+    "webpack-cli": "^5.0.1"
   },
   "description": "This is currently a project in progress for my front-end web development course through Launchcode. Its a MEAN stack app using Angular 8 and MongoDB Atlas. The goal is to provide a means for users to list and lend their own books, music albums, or other items to other users. Currently a user can register and login to a demo account that has a list of books and music albums that are stored using MongoDB. In the future I plan to have each user's account data stored separately using an index. I also plan to create a page where users can view each other's lists of lending items as well as a messaging system to establish lending logistics and terms.",
   "main": "server.js",
